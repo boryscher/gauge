@@ -6,7 +6,7 @@ import sys
 from RpiMotorLib import RpiMotorLib
 
 
-def updateGauge(gpio, steps):
+def update_gauge(gpio, steps):
     """main function loop"""
 
     direction = False
@@ -44,4 +44,4 @@ def calculate_gauge(current_value, previous_value, max_degree, min_value, max_va
     previous_degree = current_degree - degree_to_move
     percentage = current_value / max_value * 100
     return current_value, current_degree, degree_to_move, value_to_move, previous_degree, steps_to_move, percentage, \
-           current_step
+        current_step
