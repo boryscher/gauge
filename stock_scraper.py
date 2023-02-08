@@ -59,7 +59,7 @@ while datetime.datetime.now() < cycle_time:
             val_new = (float(change), datetime.datetime.now(), 'Stock_scraper', 'New', 4)
             cur.execute(sql_new, val_new)
             conn.commit()
-            old_value = change
+            old_value = None
         else:
             old_value = float(existing_record[0])
         if old_value == change:
